@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import Image from 'next/image'
 
-const CardItem = () => {
+const CardItem = ({title, subtitle}) => {
 
   const SRC = 'https://via.placeholder.com/150'
   return (
@@ -27,8 +27,8 @@ const CardItem = () => {
         <Card.Img src="https://via.placeholder.com/250" alt="Card image cap" />
       </div>
       <Card.Body>
-        <Card.Title className="card-main-title">Placeholder Title</Card.Title>
-        <Card.Text>Placehodler Subtitle</Card.Text>
+        <Card.Title className="card-main-title">{title}</Card.Title>
+        <Card.Text>{subtitle}</Card.Text>
       </Card.Body>
     </div>
     <a className="card-button">Read More</a>
