@@ -9,8 +9,8 @@ const AuthorIntro = () =>
           width={64}
           height={64}
           className="mr-3"
-          src="https://avatars1.githubusercontent.com/u/9482724?s=460&u=69a6acab13fd5547a4e316e496b573271077147f&v=4"
-          alt="Generic placeholder"
+          src="https://cdn.sanity.io/images/wn3aa1zp/production/7842bd4f7e96e80b70b7f4d435abc0434e1dfe33-380x380.jpg"
+          alt="my avatar"
         />
         <Media.Body>
           <h5 className="font-weight-bold mb-0">Hello Friends,</h5>
