@@ -208,6 +208,13 @@ html, body {
 }
 // HEADER ENDS
 
+.article-author{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
 .card-header {
   display: flex;
   // justify-content: center;
