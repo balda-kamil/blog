@@ -1,7 +1,9 @@
+import BlogContent from "components/BlogContent";
 import BlogHeader from "components/BlogHeader";
 import PageLayout from "components/PageLayout";
 import { getBlogBySlug, getAllBlogs } from "lib/api";
 import { Row, Col } from "react-bootstrap";
+
 
 const BlogDetail = ({ blog }) => {
   return (
@@ -16,12 +18,7 @@ const BlogDetail = ({ blog }) => {
             date={blog.date}
           />
           <hr />
-          {/* Blog Content Here */}
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsul in their infancy. Various versions have evolved over
-          the years, sometimes by accident, sometimes on purpose (injected
-          humour and the like).
+          <BlogContent content={blog.content}/>
         </Col>
       </Row>
     </PageLayout>

@@ -215,6 +215,10 @@ html, body {
   margin-bottom: 20px;
 }
 
+.mb-20{
+  margin-bottom: 20px;
+}
+
 .card-header {
   display: flex;
   // justify-content: center;
@@ -235,6 +239,7 @@ html, body {
   margin-top: 10px;
   font-style: italic;
   font-size: 14px;
+  display: block;
 }
 
 .blog-image {
