@@ -1,22 +1,36 @@
-import BlockContent from '@sanity/block-content-to-react'
-import HighlightCode from './HighlightCode';
+import BlockContent from "@sanity/block-content-to-react";
+import HighlightCode from "./HighlightCode";
+import Image from "next/image";
+
+import { urlFor } from "lib/api";
 
 const serializers = {
   types: {
-    code: ({node: {language, code, filename}}) => (
+    code: ({ node: { language, code, filename } }) => (
       <HighlightCode language={language} filename={filename}>
         {code}
       </HighlightCode>
-    )
-  }
-}
+    ),
+    image: ({ node: { asset, alt } }) => {
+      return (
+        <div className="blog-image">
+          <Image
+            src={urlFor(asset.url).height(920).fit('max').url()}
+            layout="fill"
+            alt={alt}
+          />
+          <div className="image-alt">{alt}</div>
+        </div>
+      );
+    },
+  },
+};
 
-const BlogContent = ({content}) => {
+const BlogContent = ({ content }) => {
   return (
     <BlockContent
       blocks={content}
       serializers={serializers}
-      imageOptions={{ w: 320, h: 240, fix: "max" }}
     />
   );
 };

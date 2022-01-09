@@ -242,10 +242,25 @@ html, body {
   display: block;
 }
 
-.blog-image {
+.blog-image,
+.blog-detail-header-image-wrapper{
+  position: relative;
   margin-bottom: 10px;
   text-align: center;
+  width: 100%;
+  img{
+    object-fit: cover;
+  }
 }
+
+.blog-image{
+  height: 330px;
+}
+
+.blog-detail-header-image-wrapper{
+  height: 440px;
+}
+
 .image-alt {
   margin-top: 3px;
 }
