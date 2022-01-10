@@ -15,11 +15,7 @@ export default function PageLayout({children, className}){
 
       <footer className="page-footer">
         <div>
-          <a href="#">courses</a>
-          {" | "}
-          <a href="#">github</a>
-          {" | "}
-          <a href="#">facebook</a>
+          <a href="kamilbalda.com">kamilbalda.com</a>
         </div>
       </footer>
     </Container>

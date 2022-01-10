@@ -2,7 +2,6 @@ import Image from "next/image";
 import { urlFor } from "lib/api";
 
 export default function BlogHeader({title, subtitle, author, date, image}) {
-  console.log(image)
   return (
     <div className="blog-detail-header">
       <div className="article-author">
@@ -27,7 +26,7 @@ export default function BlogHeader({title, subtitle, author, date, image}) {
         <Image
           className="img-fluid rounded"
           layout="fill"
-          src={urlFor(image).url()}
+          src={image}
           alt="article cover image"
         />
       </div>

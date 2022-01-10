@@ -4,6 +4,8 @@ import PageLayout from "components/PageLayout";
 import { getBlogBySlug, getAllBlogs } from "lib/api";
 import { Row, Col } from "react-bootstrap";
 
+import { urlFor } from "lib/api";
+
 
 const BlogDetail = ({ blog }) => {
   return (
@@ -13,7 +15,7 @@ const BlogDetail = ({ blog }) => {
           <BlogHeader
             title={blog.title}
             subtitle={blog.subtitle}
-            image={blog.coverImage}
+            image={urlFor(blog.coverImage).fit('max').url()}
             author={blog.author}
             date={blog.date}
           />

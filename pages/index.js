@@ -6,7 +6,6 @@ import CardItem from "components/CardItem";
 import { getAllBlogs } from "lib/api";
 
 export default function Home({ blogs }) {
-  console.log(blogs);
   return (
     <PageLayout>
       <AuthorIntro />
@@ -32,7 +31,6 @@ export default function Home({ blogs }) {
             />
           </Col>
         ))}
-        {JSON.stringify(blogs)}
       </Row>
     </PageLayout>
   );
@@ -44,7 +42,6 @@ export default function Home({ blogs }) {
 //Provides props to your page
 //It will create static page
 export async function getStaticProps() {
-  console.log("calling getStaticProps");
   const blogs = await getAllBlogs();
   return {
     props: {
